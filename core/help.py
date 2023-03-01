@@ -34,6 +34,7 @@ def help():
 
         parser.add_argument("-T",dest="T")
         parser.add_argument("-ip",dest="ip")
+        parser.add_argument("-newb","---newb",dest="newb")
         
         args = parser.parse_args()
         # help
@@ -154,6 +155,37 @@ def help():
         if args.T:
             traceroute(args.T)
             exit()
-       
+       #Noob mode
+        if args.newb:
+            url = "http://" + args.newb
+            urls = "https://" + args.newb
+            print("[+] Running in newb mode. Trying Smarter, not harder.")
+            #banner(args.newb)
+            subnetlookup(args.newb)
+            traceroute(args.newb)            
+            techno(url)
+            urlscan(url)
+            techno(urls)
+            dnslookup(args.newb)
+            extract(args.newb)
+            httpheader(args.newb)
+            nmap(args.newb)
+            sub(args.newb)
+            findshareddns(args.newb)
+            #gitusers(args.newb)
+            gitemails(args.newb)
+            crawler(args.newb)
+            whois(args.newb)
+            zone(args.newb)
+            reverseip(args.newb)
+            hosts(args.newb)
+            aslookup(args.newb)
+            cookie(args.newb)
+            dirs(args.newb)
+            nping(args.newb)
+            revdns(args.newb)
+            certspotter(args.newb)
+            geo(args.newb)
+            exit() 
        
         
